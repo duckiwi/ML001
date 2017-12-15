@@ -1,4 +1,4 @@
-function [J, grad] = logRegCostFunc(X, y, theta, lambda)
+function [J, grad] = logRegCostFunc(theta, X, y, lambda)
 %%  Computes the cost of using theta as the parameter for logistic regression
 %   to fit the data points in X and y. Returns the cost in J and the 
 %   gradient in grad
