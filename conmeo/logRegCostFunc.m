@@ -1,8 +1,7 @@
-function [J, grad] = logRegCostFunc(theta, X, y, lambda)
-%%  Compute cost and gradient for logistic regression with regularization
-%   J = LRCOSTFUNCTION(theta, X, y, lambda) computes the cost of using
-%   theta as the parameter for regularized logistic regression and the
-%   gradient of the cost w.r.t. to the parameters. 
+function [J, grad] = logRegCostFunc(X, y, theta, lambda)
+%%  Computes the cost of using theta as the parameter for logistic regression
+%   to fit the data points in X and y. Returns the cost in J and the 
+%   gradient in grad
 
 % Initialize some useful values
 m = length(y); % number of training examples
