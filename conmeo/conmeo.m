@@ -22,6 +22,7 @@ file_name = 'ex4data1.mat';
 % Load data
 fprintf('Loading and Visualizing Data ...\n')
 load(file_name);
+% initialize important variables
 m = size(X, 1);
 % Randomly select 100 data points to display
 sel = randperm(size(X, 1));
@@ -29,18 +30,12 @@ sel = sel(1:100);
 displayData(X(sel, :));
 fprintf('Program paused. Press enter to continue.\n');
 pause;
-delete sel
+clear sel
 
-%% ======================= Part 02: Extract data =======================
-data_set = readData;
-
-
-
-%% ======================= Part TODO: Linear regression =======================
+%% ======================= Part 02: Linear regression =======================
 % Input
 iteration = 1000;
-
-linRegResult = genLinReg(data_set);
+thetaLinReg = genLinReg(X, y);
 
 
 
